@@ -438,15 +438,6 @@
     text-transform:uppercase;
   }
 
-  .corner-sunflower{
-    position:absolute;
-    width:64px;
-    height:64px;
-    z-index:2;
-    pointer-events:none;
-    opacity:0.95;
-  }
-
   .balloon{
     position:absolute;
     bottom:-12%;
@@ -479,40 +470,6 @@
 <div class="stage">
   <div class="card" id="card">
 
-    <!-- corner sunflower accents -->
-    <svg class="corner-sunflower" style="top:16px; right:16px;" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(32,32)">
-        <g fill="#F3BF49">
-          <ellipse rx="8" ry="18" transform="rotate(0)"/>
-          <ellipse rx="8" ry="18" transform="rotate(45)"/>
-          <ellipse rx="8" ry="18" transform="rotate(90)"/>
-          <ellipse rx="8" ry="18" transform="rotate(135)"/>
-          <ellipse rx="8" ry="18" transform="rotate(22.5)"/>
-          <ellipse rx="8" ry="18" transform="rotate(67.5)"/>
-          <ellipse rx="8" ry="18" transform="rotate(112.5)"/>
-          <ellipse rx="8" ry="18" transform="rotate(157.5)"/>
-        </g>
-        <circle r="10" fill="#3D2A1F"/>
-        <circle r="10" fill="none" stroke="#8A6B45" stroke-width="0.5" stroke-dasharray="1.2 1.4"/>
-      </g>
-    </svg>
-    <svg class="corner-sunflower" style="bottom:16px; left:16px;" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(32,32)">
-        <g fill="#F3BF49">
-          <ellipse rx="8" ry="18" transform="rotate(0)"/>
-          <ellipse rx="8" ry="18" transform="rotate(45)"/>
-          <ellipse rx="8" ry="18" transform="rotate(90)"/>
-          <ellipse rx="8" ry="18" transform="rotate(135)"/>
-          <ellipse rx="8" ry="18" transform="rotate(22.5)"/>
-          <ellipse rx="8" ry="18" transform="rotate(67.5)"/>
-          <ellipse rx="8" ry="18" transform="rotate(112.5)"/>
-          <ellipse rx="8" ry="18" transform="rotate(157.5)"/>
-        </g>
-        <circle r="10" fill="#3D2A1F"/>
-        <circle r="10" fill="none" stroke="#8A6B45" stroke-width="0.5" stroke-dasharray="1.2 1.4"/>
-      </g>
-    </svg>
-
     <div class="progress" id="progress"></div>
 
     <!-- Screen 0: the ask -->
@@ -537,9 +494,19 @@
     <!-- Screen 2: details -->
     <div class="screen" data-screen="2">
       <p class="eyebrow reveal">Save the date</p>
+      <div class="reveal" style="display:flex; gap:40px; justify-content:center; margin-bottom:22px;">
+        <div>
+          <p class="detail-label">Date</p>
+          <p class="detail-value">August 30th</p>
+        </div>
+        <div>
+          <p class="detail-label">Time</p>
+          <p class="detail-value">10:30 AM</p>
+        </div>
+      </div>
       <div class="detail-block reveal">
-        <p class="detail-label">Date</p>
-        <p class="detail-value">August 30th</p>
+        <p class="detail-label">Venue</p>
+        <p class="detail-value" style="font-size:21px; line-height:1.3;">Valley View University, Oyibi</p>
       </div>
       <p class="message reveal" style="margin-bottom:32px;">
         Hello there, it's Bridget. It would be my pleasure to have you attend
@@ -760,8 +727,9 @@
 VERSION:2.0
 BEGIN:VEVENT
 SUMMARY:Bridget's Graduation Ceremony
-DTSTART:20260830T160000Z
-DTEND:20260830T190000Z
+DTSTART:20260830T103000Z
+DTEND:20260830T133000Z
+LOCATION:Valley View University, Oyibi
 DESCRIPTION:Dress Theme - Look and Feel Angelic
 END:VEVENT
 END:VCALENDAR`;
